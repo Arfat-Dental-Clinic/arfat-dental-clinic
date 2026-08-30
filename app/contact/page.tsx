@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+const phoneNumber = "+91 95527 86566";
+const phoneLink = "tel:+919552786566";
+
+const address =
+  "1st & 2nd Floor, Shalimar Tower, Above Haji Motors, Next to Bahar-e-Madina Masjid, Vanjar Patti Naka, Gokul Nagar, Bhiwandi, Maharashtra 421302";
+
+const googleMapsLink =
+  "https://maps.app.goo.gl/JynrUdbbmGJSWtyH9";
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white text-slate-900">
@@ -78,9 +87,18 @@ export default function ContactPage() {
                     Clinic Address
                   </h3>
 
-                  <p className="mt-1 text-sm leading-6 text-slate-500">
-                    [Clinic Address — to be provided]
+                  <p className="mt-1 max-w-lg text-sm leading-6 text-slate-500">
+                    {address}
                   </p>
+
+                  <a
+                    href={googleMapsLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-block text-sm font-bold text-cyan-600 hover:text-cyan-700"
+                  >
+                    Open in Google Maps →
+                  </a>
                 </div>
               </div>
 
@@ -96,10 +114,10 @@ export default function ContactPage() {
                   </h3>
 
                   <a
-                    href="tel:+919999999999"
+                    href={phoneLink}
                     className="mt-1 block text-sm text-slate-500 transition hover:text-cyan-600"
                   >
-                    +91 99999 99999
+                    {phoneNumber}
                   </a>
                 </div>
               </div>
@@ -116,10 +134,10 @@ export default function ContactPage() {
                   </h3>
 
                   <a
-                    href="mailto:info@arfatdentalclinic.com"
+                    href="mailto:naushad.bds@gmail.com"
                     className="mt-1 block text-sm text-slate-500 transition hover:text-cyan-600"
                   >
-                    info@arfatdentalclinic.com
+                    naushad.bds@gmail.com
                   </a>
                 </div>
               </div>
@@ -138,7 +156,13 @@ export default function ContactPage() {
                   <p className="mt-1 text-sm leading-6 text-slate-500">
                     Monday – Saturday
                     <br />
-                    10:00 AM – 7:00 PM
+                    11:00 AM – 3:00 PM
+                    <br />
+                    6:00 PM – 10:00 PM
+                    <br />
+                    <span className="font-semibold text-red-500">
+                      Sunday Closed
+                    </span>
                   </p>
                 </div>
               </div>
@@ -147,24 +171,24 @@ export default function ContactPage() {
             {/* BUTTONS */}
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <a
-                href="tel:+919999999999"
+                href={phoneLink}
                 className="rounded-full bg-cyan-600 px-7 py-4 text-center text-sm font-bold text-white transition hover:bg-cyan-700"
               >
                 Call Clinic
               </a>
 
               <a
-                href="https://wa.me/919999999999"
+                href={googleMapsLink}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border border-slate-200 px-7 py-4 text-center text-sm font-bold text-slate-700 transition hover:border-green-300 hover:bg-green-50 hover:text-green-700"
+                className="rounded-full border border-cyan-200 bg-cyan-50 px-7 py-4 text-center text-sm font-bold text-cyan-700 transition hover:bg-cyan-100"
               >
-                WhatsApp
+                Get Directions
               </a>
 
               <Link
                 href="/appointment"
-                className="rounded-full border border-cyan-200 bg-cyan-50 px-7 py-4 text-center text-sm font-bold text-cyan-700 transition hover:bg-cyan-100"
+                className="rounded-full border border-slate-200 px-7 py-4 text-center text-sm font-bold text-slate-700 transition hover:border-cyan-300 hover:text-cyan-600"
               >
                 Book Appointment
               </Link>
@@ -175,7 +199,7 @@ export default function ContactPage() {
           <div className="overflow-hidden rounded-[2.5rem] bg-slate-100 shadow-xl">
             <iframe
               title="Arfat Dental Clinic Location"
-              src="https://www.google.com/maps?q=Thane%2C%20Maharashtra&output=embed"
+              src="https://www.google.com/maps?q=1st%20%26%202nd%20Floor%2C%20Shalimar%20Tower%2C%20Above%20Haji%20Motors%2C%20Next%20to%20Bahar-e-Madina%20Masjid%2C%20Vanjar%20Patti%20Naka%2C%20Gokul%20Nagar%2C%20Bhiwandi%2C%20Maharashtra%20421302&output=embed"
               className="h-[500px] w-full border-0"
               loading="lazy"
             />
@@ -188,7 +212,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-5 md:grid-cols-3">
             <a
-              href="tel:+919999999999"
+              href={phoneLink}
               className="rounded-[2rem] border border-slate-200 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="text-3xl">☎</div>
@@ -198,12 +222,12 @@ export default function ContactPage() {
               </h3>
 
               <p className="mt-2 text-sm text-slate-500">
-                +91 99999 99999
+                {phoneNumber}
               </p>
             </a>
 
             <a
-              href="mailto:info@arfatdentalclinic.com"
+              href="mailto:naushad.bds@gmail.com"
               className="rounded-[2rem] border border-slate-200 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="text-3xl">✉</div>
@@ -213,24 +237,24 @@ export default function ContactPage() {
               </h3>
 
               <p className="mt-2 text-sm text-slate-500">
-                info@arfatdentalclinic.com
+                naushad.bds@gmail.com
               </p>
             </a>
 
             <a
-              href="https://wa.me/919999999999"
+              href={googleMapsLink}
               target="_blank"
               rel="noreferrer"
               className="rounded-[2rem] border border-slate-200 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="text-3xl">💬</div>
+              <div className="text-3xl">📍</div>
 
               <h3 className="mt-4 font-bold text-slate-950">
-                WhatsApp
+                Find Us
               </h3>
 
               <p className="mt-2 text-sm text-slate-500">
-                Chat with our clinic
+                Open location in Google Maps
               </p>
             </a>
           </div>
