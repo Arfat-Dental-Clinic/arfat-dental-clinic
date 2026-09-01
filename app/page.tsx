@@ -57,13 +57,13 @@ export default function Home() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpeg"
-              alt="Arfat Dental Clinic"
+              alt="Arfat Dental Centre"
               className="h-14 w-auto object-contain"
             />
 
             <div>
               <div className="text-lg font-bold tracking-tight text-slate-950">
-                Arfat Dental Clinic
+                Arfat Dental Centre
               </div>
 
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600">
@@ -206,7 +206,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">
-              Welcome to Arfat Dental Clinic — providing professional,
+              Welcome to Arfat Dental Centre — providing professional,
               comfortable and modern dental care for you and your family.
             </p>
 
@@ -429,12 +429,12 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <img
                   src="/images/logo.jpeg"
-                  alt="Arfat Dental Clinic"
+                  alt="Arfat Dental Centre"
                   className="h-12 w-12 rounded-xl object-contain"
                 />
 
                 <div>
-                  <div className="font-bold">Arfat Dental Clinic</div>
+                  <div className="font-bold">Arfat Dental Centre</div>
 
                   <div className="text-xs uppercase tracking-[0.2em] text-cyan-400">
                     Your Smile, Our Priority
@@ -480,7 +480,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © {new Date().getFullYear()} Arfat Dental Clinic. All rights
+            © {new Date().getFullYear()} Arfat Dental Centre. All rights
             reserved.
           </div>
         </div>

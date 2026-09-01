@@ -348,7 +348,7 @@ export default function AdminPage() {
   ) {
     const message = `Hello ${appointment.patient_name},
 
-This is Arfat Dental Clinic.
+This is Arfat Dental Centre.
 
 Your appointment details:
 
@@ -359,7 +359,7 @@ Treatment: ${appointment.treatment}
 Please contact us if you have any questions.
 
 Thank you,
-Arfat Dental Clinic`;
+Arfat Dental Centre`;
 
     const whatsappUrl =
       `https://wa.me/${CLINIC_WHATSAPP}?text=` +
@@ -426,7 +426,7 @@ Arfat Dental Clinic`;
 
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
-              Arfat Dental Clinic
+              Arfat Dental Centre
             </p>
 
             <h1 className="mt-1 text-2xl font-bold text-slate-950">

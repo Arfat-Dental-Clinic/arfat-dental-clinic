@@ -263,13 +263,13 @@ export default function AppointmentPage() {
           >
             <img
               src="/images/logo.jpeg"
-              alt="Arfat Dental Clinic"
+              alt="Arfat Dental Centre"
               className="h-12 w-12 rounded-xl object-contain"
             />
 
             <div>
               <div className="text-lg font-bold">
-                Arfat Dental Clinic
+                Arfat Dental Centre
               </div>
 
               <div className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-600">
@@ -319,7 +319,7 @@ export default function AppointmentPage() {
             <div className="rounded-[2rem] bg-cyan-600 p-8 text-white shadow-xl">
 
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-100">
-                Arfat Dental Clinic
+                Arfat Dental Centre
               </p>
 
               <h2 className="mt-4 text-3xl font-bold">
@@ -709,7 +709,7 @@ export default function AppointmentPage() {
       </section>
 
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Arfat Dental Clinic. All rights reserved.
+        © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
       </footer>
 
     </main>

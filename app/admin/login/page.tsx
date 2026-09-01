@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
         <div className="text-center">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
-            Arfat Dental Clinic
+            Arfat Dental Centre
           </p>
 
           <h1 className="mt-3 text-3xl font-bold text-slate-950">

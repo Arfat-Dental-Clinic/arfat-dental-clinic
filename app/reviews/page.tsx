@@ -174,7 +174,7 @@ export default function ReviewsPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-cyan-50">
-            Have a dental concern? Schedule a visit with Arfat Dental Clinic
+            Have a dental concern? Schedule a visit with Arfat Dental Centre
             and let our team help you take care of your smile.
           </p>
 
@@ -189,8 +189,9 @@ export default function ReviewsPage() {
 
       {/* FOOTER */}
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Arfat Dental Clinic. All rights reserved.
+        © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
       </footer>
     </main>
   );
 }
+
