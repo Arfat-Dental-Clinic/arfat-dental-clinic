@@ -36,8 +36,6 @@ const timeSlots = [
   "9:30 PM",
 ];
 
-const CLINIC_WHATSAPP = "919552786566";
-
 export default function AdminPage() {
   const router = useRouter();
 
@@ -133,9 +131,6 @@ export default function AdminPage() {
     setBlocking(true);
 
     try {
-      /*
-       * Check if the slot already exists.
-       */
       const {
         data: existing,
         error: checkError,
@@ -167,9 +162,6 @@ export default function AdminPage() {
         return;
       }
 
-      /*
-       * Slot already exists.
-       */
       if (
         existing &&
         existing.length > 0
@@ -187,12 +179,6 @@ export default function AdminPage() {
         return;
       }
 
-      /*
-       * Insert blocked appointment.
-       *
-       * message is intentionally included because
-       * your database requires message to NOT be null.
-       */
       const {
         data: blocked,
         error: insertError,
@@ -346,24 +332,75 @@ export default function AdminPage() {
   function openWhatsApp(
     appointment: Appointment
   ) {
-    const message = `Hello ${appointment.patient_name},
+    // Remove spaces, +, brackets, hyphens, etc.
+    let patientPhone =
+      appointment.phone.replace(/\D/g, "");
 
-This is Arfat Dental Centre.
+    // Add Indian country code if a 10-digit
+    // Indian mobile number was entered.
+    if (patientPhone.length === 10) {
+      patientPhone = `91${patientPhone}`;
+    }
 
-Your appointment details:
+    if (!patientPhone) {
+      setError(
+        "This patient does not have a valid phone number."
+      );
+      return;
+    }
 
-Date: ${appointment.appointment_date}
-Time: ${appointment.appointment_time}
-Treatment: ${appointment.treatment}
+    let whatsappMessage = "";
 
-Please contact us if you have any questions.
+    if (appointment.status === "confirmed") {
+      whatsappMessage = `Hello ${appointment.patient_name},
+
+Your appointment at Arfat Dental Centre has been CONFIRMED. ✅
+
+📅 Date: ${appointment.appointment_date}
+🕐 Time: ${appointment.appointment_time}
+🦷 Treatment: ${appointment.treatment}
+
+We look forward to seeing you.
 
 Thank you,
 Arfat Dental Centre`;
+    } else if (
+      appointment.status === "cancelled"
+    ) {
+      whatsappMessage = `Hello ${appointment.patient_name},
+
+We regret to inform you that your appointment request at Arfat Dental Centre could not be confirmed. ❌
+
+📅 Requested Date: ${appointment.appointment_date}
+🕐 Requested Time: ${appointment.appointment_time}
+🦷 Treatment: ${appointment.treatment}
+
+Please contact us or book another convenient appointment time.
+
+Thank you,
+Arfat Dental Centre`;
+    } else {
+      whatsappMessage = `Hello ${appointment.patient_name},
+
+Thank you for booking an appointment at Arfat Dental Centre. 🦷
+
+Your appointment request is currently PENDING.
+
+📅 Date: ${appointment.appointment_date}
+🕐 Time: ${appointment.appointment_time}
+🦷 Treatment: ${appointment.treatment}
+
+We will review your appointment and confirm it soon.
+
+Thank you,
+Arfat Dental Centre`;
+    }
 
     const whatsappUrl =
-      `https://wa.me/${CLINIC_WHATSAPP}?text=` +
-      encodeURIComponent(message);
+      `https://wa.me/${patientPhone}?text=` +
+      encodeURIComponent(
+        whatsappMessage
+      );
 
     window.open(
       whatsappUrl,
@@ -420,7 +457,6 @@ Arfat Dental Centre`;
   return (
     <main className="min-h-screen bg-slate-100 text-slate-900">
 
-      {/* HEADER */}
       <header className="border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
 
@@ -462,14 +498,12 @@ Arfat Dental Centre`;
 
       <section className="mx-auto max-w-7xl px-5 py-10">
 
-        {/* ERROR */}
         {error && (
           <div className="mb-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm font-semibold text-red-600">
             {error}
           </div>
         )}
 
-        {/* BLOCK SLOT */}
         <div className="mb-8 rounded-[2rem] bg-white p-7 shadow-sm">
 
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-red-500">
@@ -488,7 +522,6 @@ Arfat Dental Centre`;
 
           <div className="mt-6 grid gap-4 md:grid-cols-[1fr_1fr_auto]">
 
-            {/* DATE */}
             <div>
               <label
                 htmlFor="block-date"
@@ -510,7 +543,6 @@ Arfat Dental Centre`;
               />
             </div>
 
-            {/* TIME */}
             <div>
               <label
                 htmlFor="block-time"
@@ -546,7 +578,6 @@ Arfat Dental Centre`;
               </select>
             </div>
 
-            {/* BUTTON */}
             <div className="flex items-end">
 
               <button
@@ -565,7 +596,6 @@ Arfat Dental Centre`;
           </div>
         </div>
 
-        {/* SUMMARY */}
         <div className="mb-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
           <div className="rounded-2xl bg-white p-6 shadow-sm">
@@ -610,7 +640,6 @@ Arfat Dental Centre`;
 
         </div>
 
-        {/* BLOCKED SLOTS */}
         {blockedAppointments.length > 0 && (
           <div className="mb-10">
 
@@ -679,7 +708,6 @@ Arfat Dental Centre`;
           </div>
         )}
 
-        {/* PATIENT APPOINTMENTS */}
         <div>
 
           <div className="mb-4">
@@ -729,7 +757,6 @@ Arfat Dental Centre`;
 
                     <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
 
-                      {/* PATIENT DETAILS */}
                       <div className="min-w-0">
 
                         <div className="flex flex-wrap items-center gap-3">
@@ -827,10 +854,8 @@ Arfat Dental Centre`;
 
                       </div>
 
-                      {/* ACTION BUTTONS */}
                       <div className="flex flex-wrap gap-2 lg:max-w-md lg:justify-end">
 
-                        {/* WHATSAPP */}
                         <button
                           type="button"
                           onClick={() =>
@@ -843,7 +868,6 @@ Arfat Dental Centre`;
                           WhatsApp
                         </button>
 
-                        {/* CONFIRM */}
                         <button
                           type="button"
                           onClick={() =>
@@ -857,7 +881,6 @@ Arfat Dental Centre`;
                           Confirm
                         </button>
 
-                        {/* CANCEL */}
                         <button
                           type="button"
                           onClick={() =>
@@ -871,7 +894,6 @@ Arfat Dental Centre`;
                           Cancel
                         </button>
 
-                        {/* PENDING */}
                         <button
                           type="button"
                           onClick={() =>
@@ -904,4 +926,5 @@ Arfat Dental Centre`;
 
     </main>
   );
+  
 }
