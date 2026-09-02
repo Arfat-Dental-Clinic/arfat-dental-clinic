@@ -58,7 +58,7 @@ export default function AboutPage() {
       <section className="bg-slate-950 px-5 py-20 text-white lg:px-6 lg:py-28">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
-            About Arfat Dental Centre
+            About Arfat Dental Center
           </p>
 
           <h1 className="mt-4 max-w-4xl text-5xl font-bold leading-tight tracking-tight sm:text-6xl">
@@ -95,7 +95,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-6 leading-8 text-slate-600">
-              At Arfat Dental Centre, we believe visiting the dentist should be
+              At Arfat Dental Center, we believe visiting the dentist should be
               a comfortable and positive experience.
             </p>
 
@@ -235,7 +235,7 @@ export default function AboutPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-cyan-50">
-            Book an appointment with Arfat Dental Centre and take the next step
+            Book an appointment with Arfat Dental Center and take the next step
             toward better dental health.
           </p>
 
@@ -250,7 +250,7 @@ export default function AboutPage() {
 
       {/* FOOTER */}
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400 lg:px-6">
-        © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
+        © {new Date().getFullYear()} Arfat Dental Center. All rights reserved.
       </footer>
     </main>
   );

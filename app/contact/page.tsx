@@ -53,7 +53,7 @@ export default function ContactPage() {
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
             Have a question or want to schedule a visit? Get in touch with
-            Arfat Dental Centre.
+            Arfat Dental Center.
           </p>
         </div>
       </section>
@@ -67,7 +67,7 @@ export default function ContactPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
-              Visit Arfat Dental Centre.
+              Visit Arfat Dental Center.
             </h2>
 
             <p className="mt-6 max-w-xl leading-8 text-slate-600">
@@ -198,7 +198,7 @@ export default function ContactPage() {
           {/* MAP */}
           <div className="overflow-hidden rounded-[2.5rem] bg-slate-100 shadow-xl">
             <iframe
-              title="Arfat Dental Centre Location"
+              title="Arfat Dental Center Location"
               src="https://www.google.com/maps?q=1st%20%26%202nd%20Floor%2C%20Shalimar%20Tower%2C%20Above%20Haji%20Motors%2C%20Next%20to%20Bahar-e-Madina%20Masjid%2C%20Vanjar%20Patti%20Naka%2C%20Gokul%20Nagar%2C%20Bhiwandi%2C%20Maharashtra%20421302&output=embed"
               className="h-[500px] w-full border-0"
               loading="lazy"
@@ -284,7 +284,7 @@ export default function ContactPage() {
 
       {/* FOOTER */}
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400">
-        © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
+        © {new Date().getFullYear()} Arfat Dental Center. All rights reserved.
       </footer>
     </main>
   );

@@ -354,7 +354,7 @@ export default function AdminPage() {
     if (appointment.status === "confirmed") {
       whatsappMessage = `Hello ${appointment.patient_name},
 
-Your appointment at Arfat Dental Centre has been CONFIRMED. ✅
+Your appointment at Arfat Dental Center has been CONFIRMED. ✅
 
 📅 Date: ${appointment.appointment_date}
 🕐 Time: ${appointment.appointment_time}
@@ -363,13 +363,13 @@ Your appointment at Arfat Dental Centre has been CONFIRMED. ✅
 We look forward to seeing you.
 
 Thank you,
-Arfat Dental Centre`;
+Arfat Dental Center`;
     } else if (
       appointment.status === "cancelled"
     ) {
       whatsappMessage = `Hello ${appointment.patient_name},
 
-We regret to inform you that your appointment request at Arfat Dental Centre could not be confirmed. ❌
+We regret to inform you that your appointment request at Arfat Dental Center could not be confirmed. ❌
 
 📅 Requested Date: ${appointment.appointment_date}
 🕐 Requested Time: ${appointment.appointment_time}
@@ -378,11 +378,11 @@ We regret to inform you that your appointment request at Arfat Dental Centre cou
 Please contact us or book another convenient appointment time.
 
 Thank you,
-Arfat Dental Centre`;
+Arfat Dental Center`;
     } else {
       whatsappMessage = `Hello ${appointment.patient_name},
 
-Thank you for booking an appointment at Arfat Dental Centre. 🦷
+Thank you for booking an appointment at Arfat Dental Center. 🦷
 
 Your appointment request is currently PENDING.
 
@@ -393,7 +393,7 @@ Your appointment request is currently PENDING.
 We will review your appointment and confirm it soon.
 
 Thank you,
-Arfat Dental Centre`;
+Arfat Dental Center`;
     }
 
     const whatsappUrl =
@@ -462,7 +462,7 @@ Arfat Dental Centre`;
 
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-600">
-              Arfat Dental Centre
+              Arfat Dental Center
             </p>
 
             <h1 className="mt-1 text-2xl font-bold text-slate-950">

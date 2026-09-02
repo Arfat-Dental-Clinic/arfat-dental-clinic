@@ -22,7 +22,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-3">
           <img
             src="/images/logo.png"
-            alt="Arfat Dental Centre"
+            alt="Arfat Dental Center"
             className="h-12 w-12 rounded-xl object-contain"
           />
 

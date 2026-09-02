@@ -54,13 +54,13 @@ export default function ServicesPage() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpeg"
-              alt="Arfat Dental Centre"
+              alt="Arfat Dental Center"
               className="h-12 w-auto object-contain"
             />
 
             <div>
               <div className="text-lg font-bold text-slate-950">
-                Arfat Dental Centre
+                Arfat Dental Center
               </div>
 
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600">
@@ -163,7 +163,7 @@ export default function ServicesPage() {
       {/* FOOTER */}
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400 lg:px-6">
         <p>
-          © {new Date().getFullYear()} Arfat Dental Centre. All rights
+          © {new Date().getFullYear()} Arfat Dental Center. All rights
           reserved.
         </p>
       </footer>

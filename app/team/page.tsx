@@ -41,13 +41,13 @@ export default function TeamPage() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpeg"
-              alt="Arfat Dental Centre"
+              alt="Arfat Dental Center"
               className="h-14 w-auto object-contain"
             />
 
             <div>
               <div className="text-lg font-bold tracking-tight text-slate-950">
-                Arfat Dental Centre
+                Arfat Dental Center
               </div>
 
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600">
@@ -183,7 +183,7 @@ export default function TeamPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Meet the dental professionals at Arfat Dental Centre, dedicated to
+            Meet the dental professionals at Arfat Dental Center, dedicated to
             providing quality, comfortable and patient-focused dental care.
           </p>
         </div>
@@ -236,7 +236,7 @@ export default function TeamPage() {
 
                 <p className="mt-7 max-w-xl leading-7 text-slate-300">
                   Dr. Naushad Ansari Mohd Saleem is the lead dentist at
-                  Arfat Dental Centre, providing professional dental care
+                  Arfat Dental Center, providing professional dental care
                   with a focus on implants, braces and complete oral care.
                 </p>
 
@@ -342,13 +342,13 @@ export default function TeamPage() {
               <div className="flex items-center gap-3">
                 <img
                   src="/images/logo.jpeg"
-                  alt="Arfat Dental Centre"
+                  alt="Arfat Dental Center"
                   className="h-12 w-12 rounded-xl object-contain"
                 />
 
                 <div>
                   <div className="font-bold">
-                    Arfat Dental Centre
+                    Arfat Dental Center
                   </div>
 
                   <div className="text-xs uppercase tracking-[0.2em] text-cyan-400">
@@ -395,7 +395,7 @@ export default function TeamPage() {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © {new Date().getFullYear()} Arfat Dental Centre. All rights
+            © {new Date().getFullYear()} Arfat Dental Center. All rights
             reserved.
           </div>
         </div>

@@ -213,7 +213,7 @@ export default function TreatmentsPage() {
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-7 text-cyan-50">
-            Contact Arfat Dental Centre or request an appointment online.
+            Contact Arfat Dental Center or request an appointment online.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -236,7 +236,7 @@ export default function TreatmentsPage() {
 
       {/* FOOTER */}
       <footer className="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400 lg:px-6">
-        © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
+        © {new Date().getFullYear()} Arfat Dental Center. All rights reserved.
       </footer>
     </main>
   );

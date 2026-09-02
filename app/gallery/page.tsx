@@ -24,7 +24,7 @@ const galleryImages = [
   {
     src: "/images/clinicinterior.jpg",
     title: "Clinic Interior",
-    description: "The interior of Arfat Dental Centre.",
+    description: "The interior of Arfat Dental Center.",
   },
   {
     src: "/images/reception.jpg",
@@ -66,13 +66,13 @@ export default function GalleryPage() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpeg"
-              alt="Arfat Dental Centre"
+              alt="Arfat Dental Center"
               className="h-14 w-auto object-contain"
             />
 
             <div>
               <div className="text-lg font-bold tracking-tight text-slate-950">
-                Arfat Dental Centre
+                Arfat Dental Center
               </div>
 
               <div className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-600">
@@ -216,7 +216,7 @@ export default function GalleryPage() {
           </p>
 
           <h1 className="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
-            Explore Arfat Dental Centre
+            Explore Arfat Dental Center
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
@@ -322,7 +322,7 @@ export default function GalleryPage() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Explore Arfat Dental Centre in 360°
+              Explore Arfat Dental Center in 360°
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl leading-8 text-cyan-50">
@@ -395,14 +395,14 @@ export default function GalleryPage() {
 
                 <img
                   src="/images/logo.jpeg"
-                  alt="Arfat Dental Centre"
+                  alt="Arfat Dental Center"
                   className="h-12 w-12 rounded-xl object-contain"
                 />
 
                 <div>
 
                   <div className="font-bold">
-                    Arfat Dental Centre
+                    Arfat Dental Center
                   </div>
 
                   <div className="text-xs uppercase tracking-[0.2em] text-cyan-400">
@@ -454,7 +454,7 @@ export default function GalleryPage() {
           </div>
 
           <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-            © {new Date().getFullYear()} Arfat Dental Centre. All rights reserved.
+            © {new Date().getFullYear()} Arfat Dental Center. All rights reserved.
           </div>
 
         </div>
